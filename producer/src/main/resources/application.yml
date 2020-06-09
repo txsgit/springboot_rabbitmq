@@ -1,0 +1,16 @@
+server:
+  port: 9090
+spring:
+  rabbitmq:
+    host: 192.168.31.206
+    username: test
+    password: test
+    virtual-host: /
+    port: 5672
+    #启用消息发送确认模式 配置correlated时 confirmCallback才返回应答
+    publisher-confirm-type: correlated
+    #启用消息发送返回模式
+    publisher-returns: true
+    #mandatory不设置消息也会返回
+    template:
+      mandatory: true

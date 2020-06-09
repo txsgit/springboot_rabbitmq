@@ -1,0 +1,15 @@
+server:
+  port: 8080
+spring:
+  rabbitmq:
+    host: 192.168.31.206
+    username: test
+    password: test
+    virtual-host: /
+    port: 5672
+    listener:
+      simple:
+        #消费者手动应答消息
+        acknowledge-mode: manual
+        concurrency: 1  #最小监听数量
+        max-concurrency: 2  #最大监听数量
